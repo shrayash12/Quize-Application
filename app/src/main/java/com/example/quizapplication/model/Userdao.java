@@ -23,7 +23,7 @@ public interface Userdao {
 
     @Query("SELECT * FROM User_Table WHERE email LIKE :email AND " +
             "password LIKE :password LIMIT 1")
-
-     LiveData<User> login(String email, String password);
-
+    LiveData<User> login(String email, String password);
 }
+
+

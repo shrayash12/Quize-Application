@@ -12,31 +12,19 @@ import com.example.quizapplication.model.UserRepository;
 import java.util.List;
 
 public class UserViewModel extends AndroidViewModel {
-    public UserRepository userRepository;
-    LiveData<User> userLiveData;
-    public UserViewModel(@NonNull Application application, Object email, Object password) {
+  private   UserRepository userRepository;
+  LiveData<User> userLiveData;
+
+    public UserViewModel(@NonNull Application application) {
         super(application);
-
-        userRepository = new UserRepository(application);
-        userLiveData = userRepository.login(email,password);
     }
-
-
-
-
-    LiveData<User>getUserLiveData() {
-        return userLiveData;
+    LiveData<User> getAllDetails(String email, String password){
+       return   userRepository.login(email,password);
     }
-
-    public void register(User user) {
+    public void finalRegester(User user){
         userRepository.register(user);
     }
-
-    public LiveData<User> login(String email,String password) {
-       return userRepository.login(email,password);
-    }
-
-    public void delete() {
+    public void delete(){
         userRepository.delete();
     }
 }
