@@ -17,19 +17,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:hint="Name"/>
+        android:hint="email"/>
     <EditText
         android:id="@+id/register_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:hint="Name"/>
+        android:hint="password"/>
     <EditText
         android:id="@+id/register_city"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:hint="Name"/>
+        android:hint="City"/>
     <Button
         android:id="@+id/btnR_register"
         android:layout_width="wrap_content"

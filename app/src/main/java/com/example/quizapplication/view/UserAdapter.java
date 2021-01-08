@@ -33,6 +33,11 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
         holder.tvCity.setText(list.get(position).getCity());
 
     }
+    public void submitListOfUsers(List<User> list){
+        this.list = list;
+        notifyDataSetChanged();
+
+    }
 
     @Override
     public int getItemCount() {

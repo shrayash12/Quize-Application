@@ -14,8 +14,8 @@ public class UserRepository {
 
     // Room executes all queries on a separate thread.
     // Observed LiveData will notify the observer when the data has changed.
-     public LiveData<User> login(String emal, String password) {
-        return userdao.login(emal, password);
+     public LiveData<User> login(String email, String password) {
+        return userdao.login(email, password);
     }
 
 
